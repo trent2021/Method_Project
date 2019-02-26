@@ -10,15 +10,8 @@ public class Main {
 
         hello();
 
-
-
-
-
-
-
-
-
-
+        multiply();
+        
     }
 
     public static void helloWorld() {
@@ -35,6 +28,22 @@ public class Main {
         name = keyboard.nextLine();
         System.out.println("Hello " + name);
         return;
+    }
+    public static void multiply(){
+        Scanner keyboard;
+        int firstNumber;
+        int secondNumber;
+        int multiplied;
+        keyboard = new Scanner(System.in);
+
+        System.out.println("Enter a number");
+        firstNumber = keyboard.nextInt();
+        System.out.println("Enter another number");
+        secondNumber = keyboard.nextInt();
+
+        multiplied = (firstNumber*secondNumber);
+        System.out.println("Your numbers multipled equal " + multiplied);
+
 
 
 
