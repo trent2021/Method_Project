@@ -11,7 +11,9 @@ public class Main {
         hello();
 
         multiply();
-        
+
+        divide();
+
     }
 
     public static void helloWorld() {
@@ -27,7 +29,6 @@ public class Main {
         System.out.println("Enter your name");
         name = keyboard.nextLine();
         System.out.println("Hello " + name);
-        return;
     }
     public static void multiply(){
         Scanner keyboard;
@@ -43,11 +44,21 @@ public class Main {
 
         multiplied = (firstNumber*secondNumber);
         System.out.println("Your numbers multipled equal " + multiplied);
+    }
+    public static void divide(){
+        Scanner keyboard;
+        double firstNumber;
+        double secondNumber;
+        double divided;
+        keyboard = new Scanner (System.in);
 
 
+        System.out.println("Enter a number");
+        firstNumber = keyboard.nextDouble();
+        System.out.println("Enter another number");
+        secondNumber = keyboard.nextDouble();
 
-
-
-
+        divided = (firstNumber/secondNumber);
+        System.out.println("Your numbers divided equal " + divided);
     }
 }
