@@ -1,5 +1,7 @@
 package com.LickingHeights;
 
+import java.awt.*;
+import java.security.Key;
 import java.util.Scanner;
 
 public class Main {
@@ -15,6 +17,8 @@ public class Main {
         divide();
 
         max();
+
+        switchWords();
 
     }
 
@@ -84,5 +88,17 @@ public class Main {
             System.out.println(secondNumber);
         }
     }
+    public static void switchWords(){
+        Scanner keyboard;
+        String firstWord;
+        String secondWord;
 
+        keyboard = new Scanner (System.in);
+
+        System.out.println("Enter a word");
+        firstWord = keyboard.nextLine();
+        System.out.println("Enter another word");
+        secondWord = keyboard.nextLine();
+        System.out.println(secondWord + " " + firstWord);
+    }
 }
