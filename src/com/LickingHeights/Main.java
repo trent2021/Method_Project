@@ -14,6 +14,8 @@ public class Main {
 
         divide();
 
+        max();
+
     }
 
     public static void helloWorld() {
@@ -61,4 +63,26 @@ public class Main {
         divided = (firstNumber/secondNumber);
         System.out.println("Your numbers divided equal " + divided);
     }
+    public static void max(){
+        Scanner keyboard;
+        double firstNumber;
+        double secondNumber;
+
+        keyboard = new Scanner (System.in);
+
+        System.out.println("Enter a number");
+        firstNumber = keyboard.nextDouble();
+        System.out.println("Enter another number");
+        secondNumber = keyboard.nextDouble();
+
+        if (firstNumber>secondNumber) {
+            System.out.println(firstNumber);
+        }
+        else {
+        }
+        if(secondNumber>firstNumber) {
+            System.out.println(secondNumber);
+        }
+    }
+
 }
