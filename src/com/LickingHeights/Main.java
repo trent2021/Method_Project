@@ -1,104 +1,99 @@
 package com.LickingHeights;
 
-import java.awt.*;
-import java.security.Key;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        helloWorld();
-
-        hello();
-
-        multiply();
-
-        divide();
-
-        max();
-
-        switchWords();
-
-    }
-
-    public static void helloWorld() {
-        System.out.println("Hello World");
-    }
-
-
-    public static void hello(){
-        String name;
         Scanner keyboard;
+        String name;
+        int multiplyFirstNumber;
+        int multiplySecondNumber;
+        double divideFirstNumber;
+        double divideSecondNumber;
+        double divided;
+        double firstNumber;
+        double secondNumber;
+        String firstWord;
+        String secondWord;
         keyboard = new Scanner(System.in);
+
+
+        helloWorld();
 
         System.out.println("Enter your name");
         name = keyboard.nextLine();
-        System.out.println("Hello " + name);
-    }
-    public static void multiply(){
-        Scanner keyboard;
-        int firstNumber;
-        int secondNumber;
-        int multiplied;
-        keyboard = new Scanner(System.in);
+        System.out.println(hello(name));
+
 
         System.out.println("Enter a number");
-        firstNumber = keyboard.nextInt();
+        multiplyFirstNumber = keyboard.nextInt();
         System.out.println("Enter another number");
-        secondNumber = keyboard.nextInt();
+        multiplySecondNumber = keyboard.nextInt();
+        System.out.println(multiply(multiplyFirstNumber,multiplySecondNumber));
+        System.out.print(("Your numbers multiplied equal ") + multiply(multiplyFirstNumber,multiplySecondNumber));
 
-        multiplied = (firstNumber*secondNumber);
-        System.out.println("Your numbers multipled equal " + multiplied);
-    }
-    public static void divide(){
-        Scanner keyboard;
-        double firstNumber;
-        double secondNumber;
-        double divided;
-        keyboard = new Scanner (System.in);
+        System.out.println(" ");
+        System.out.println("Enter a number");
+        divideFirstNumber = keyboard.nextDouble();
+        System.out.println("Enter another number");
+        divideSecondNumber = keyboard.nextDouble();
+        System.out.println(divide(divideFirstNumber,divideSecondNumber));
+        System.out.println(("Your numbers divided equal ") + divide(divideFirstNumber,divideSecondNumber));
 
 
+        System.out.println(" ");
         System.out.println("Enter a number");
         firstNumber = keyboard.nextDouble();
         System.out.println("Enter another number");
         secondNumber = keyboard.nextDouble();
+        System.out.print("The higher number is ");
 
-        divided = (firstNumber/secondNumber);
-        System.out.println("Your numbers divided equal " + divided);
-    }
-    public static void max(){
-        Scanner keyboard;
-        double firstNumber;
-        double secondNumber;
 
-        keyboard = new Scanner (System.in);
-
-        System.out.println("Enter a number");
-        firstNumber = keyboard.nextDouble();
-        System.out.println("Enter another number");
-        secondNumber = keyboard.nextDouble();
-
-        if (firstNumber>secondNumber) {
+        if (firstNumber > secondNumber) {
             System.out.println(firstNumber);
-        }
-        else {
-        }
-        if(secondNumber>firstNumber) {
+        } else
             System.out.println(secondNumber);
-        }
-    }
-    public static void switchWords(){
-        Scanner keyboard;
-        String firstWord;
-        String secondWord;
 
-        keyboard = new Scanner (System.in);
+
+
 
         System.out.println("Enter a word");
-        firstWord = keyboard.nextLine();
+        firstWord=keyboard.nextLine();
         System.out.println("Enter another word");
-        secondWord = keyboard.nextLine();
-        System.out.println(secondWord + " " + firstWord);
+        secondWord=keyboard.nextLine();
+        System.out.println(secondWord+firstWord);
+
+
+    }
+    public static void helloWorld(){
+    System.out.println("Hello World");
+
+    }
+    public static String hello(String name){
+
+        return "Hello " + name;
+    }
+    public static int multiply(int firstNumber, int secondNumber){
+
+        return firstNumber * secondNumber;
+
+    }
+    public static double divide(double firstNumber, double secondNumber){
+
+       return firstNumber / secondNumber;
+
+    }
+    public static double max(double firstNumber, double secondNumber) {
+
+        return firstNumber;
+
+    }
+    public static String switchWords(String switchwords){
+
+        return switchwords;
+
+
     }
 }
