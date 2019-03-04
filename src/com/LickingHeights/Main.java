@@ -1,5 +1,6 @@
 package com.LickingHeights;
 
+import javax.annotation.processing.SupportedSourceVersion;
 import java.util.Scanner;
 
 public class Main {
@@ -12,11 +13,6 @@ public class Main {
         int multiplySecondNumber;
         double divideFirstNumber;
         double divideSecondNumber;
-        double divided;
-        double firstNumber;
-        double secondNumber;
-        String firstWord;
-        String secondWord;
         keyboard = new Scanner(System.in);
 
 
@@ -43,27 +39,13 @@ public class Main {
         System.out.println(("Your numbers divided equal ") + divide(divideFirstNumber,divideSecondNumber));
 
 
-        System.out.println(" ");
-        System.out.println("Enter a number");
-        firstNumber = keyboard.nextDouble();
-        System.out.println("Enter another number");
-        secondNumber = keyboard.nextDouble();
-        System.out.print("The higher number is ");
+        System.out.println(max(0));
 
-
-        if (firstNumber > secondNumber) {
-            System.out.println(firstNumber);
-        } else
-            System.out.println(secondNumber);
+        System.out.println(switchWords(""));
 
 
 
 
-        System.out.println("Enter a word");
-        firstWord=keyboard.nextLine();
-        System.out.println("Enter another word");
-        secondWord=keyboard.nextLine();
-        System.out.println(secondWord+firstWord);
 
 
     }
@@ -85,14 +67,46 @@ public class Main {
        return firstNumber / secondNumber;
 
     }
-    public static double max(double firstNumber, double secondNumber) {
 
-        return firstNumber;
+    public static double max(double number) {
+        {
+            double firstNumber;
+            double secondNumber;
+            number = 0;
+            Scanner keyboard;
+            keyboard = new Scanner(System.in);
 
+            System.out.println(" ");
+            System.out.println("Enter a number");
+            firstNumber = keyboard.nextDouble();
+            System.out.println("Enter another number");
+            secondNumber = keyboard.nextDouble();
+            System.out.print("The higher number is ");
+
+
+            if (firstNumber > secondNumber) {
+                number = firstNumber;
+            } else {
+                number = secondNumber;
+            }
+
+            return number;
+
+        }
     }
-    public static String switchWords(String switchwords){
+    public static String switchWords(String combinedWords){
+        Scanner keyboard;
+        keyboard = new Scanner(System.in);
+        String firstWord;
+        String secondWord;
 
-        return switchwords;
+        System.out.println("Enter a word");
+        firstWord=keyboard.nextLine();
+        System.out.println("Enter another word");
+        secondWord=keyboard.nextLine();
+        combinedWords = secondWord + " " + firstWord;
+
+        return combinedWords;
 
 
     }
